@@ -1,0 +1,26 @@
+model:
+  architecture: "yolov5"
+  input_size: [640, 640]
+  num_classes: 5
+  classes:
+    - "dock"
+    - "boat" 
+    - "boat_lift"
+    - "jetski"
+    - "car"
+
+training:
+  batch_size: 16
+  epochs: 100
+  learning_rate: 0.001
+  optimizer: "adam"
+  
+data:
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  
+paths:
+  data_dir: "data/"
+  model_dir: "data/models/"
+  results_dir: "results/"
